@@ -1,4 +1,5 @@
 import React,{useState,useEffect} from "react";
+import Badge from 'react-bootstrap/Badge';
 import {TbShoppingCart} from 'react-icons/tb'
 import { useDispatch, useSelector } from "react-redux";
 import { ADD_TO_CART,REMOVE_CART,REMOVE_IND_ITEM } from "../redux/actions/action";
@@ -61,7 +62,7 @@ useEffect(()=>{
       <div className="container">
         <div className="header">
          <div><span>Foody Food</span></div>
-          <div onClick={handleDropdownClick} className="dropdown-btn">{dropdownValue === "" ?<TbShoppingCart />: dropdownValue}</div>
+          <div onClick={handleDropdownClick} className="dropdown-btn">{dropdownValue === "" ?<><TbShoppingCart /><Badge >{getdata.length}</Badge></>: dropdownValue}</div>
          
         </div>
       </div>
@@ -85,7 +86,7 @@ useEffect(()=>{
                <span>SubTotal:</span><br></br>
                {cumdata.map((data)=>{
                 return (
-                 <> <span>{data.rname}:</span><span>{data.price}</span><span>*</span><span>{data.qnty}</span>=<span>{data.price*data.qnty}<br></br></span></>
+                 <><span>{data.rname}:</span><span>{data.price}</span><span>*</span><span>{data.qnty}</span>=<span>{data.price*data.qnty}<br></br></span></>
                 )
                })}
                
