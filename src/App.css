@@ -61,6 +61,7 @@
 .dropdown-items {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
   width: 200px;
+  background-color: darkgrey;
   position: absolute;
   margin-top: 5px;
   color: black;
@@ -101,6 +102,7 @@
 {
   width:250px;
 }
+
 .price
 {
   font-size:1rem;
@@ -138,6 +140,15 @@
 {
   font-size: 1.5rem;
 }
+.contain
+{
+  display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
 .images
 {width:80px;}
 @keyframes App-logo-spin {
